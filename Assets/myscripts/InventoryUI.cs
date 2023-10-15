@@ -5,16 +5,16 @@ using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
-    private TextMeshProUGUI CollectableText;
+    private TextMeshProUGUI coinText;
 
     // Start is called before the first frame update
     void Start()
     {
-        CollectableText = GetComponent<TextMeshProUGUI>();
+        coinText = GetComponent<TextMeshProUGUI>();
     }
 
-    public void UpdateCollectableText(PlayerInventory playerInventory)
+    public void UpdateCoinText(PlayerInventory playerInventory)
     {
-        CollectableText.text = playerInventory.NumberOfCollectables.ToString();
+        coinText.text = playerInventory.NumberOfCoins.ToString();
     }
 }

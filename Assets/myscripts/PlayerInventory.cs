@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int NumberOfCollectables { get; private set; }
+    public int NumberOfCoins { get; private set; }
 
-    public UnityEvent<PlayerInventory> OnCollectableCollected;
+    public UnityEvent<PlayerInventory> OnCoinCollected;
 
-    public void ObjectsCollected()
+    public void CoinCollected()
     {
-        NumberOfCollectables++;
-        OnCollectableCollected.Invoke(this);
+        NumberOfCoins++;
+        OnCoinCollected.Invoke(this);
     }
 }
